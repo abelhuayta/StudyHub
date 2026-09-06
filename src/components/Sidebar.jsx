@@ -34,7 +34,6 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           padding: 1.5rem 1rem;
           background: var(--polo-blue-950, #0a1628);
           gap: 1.5rem;
-          background color: var(--polo-blue-400, #6b8cae);
         }
 
         .sidebar-titulo {
@@ -42,7 +41,6 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           font-weight: 700;
           color: var(--polo-blue-50, #f0f6ff);
           margin: 0;
-          background color: var(--polo-blue-400, #6b8cae);
         }
 
         .sidebar-nav {
@@ -51,17 +49,12 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           gap: 1.25rem;
           flex-grow: 1;
           overflow-y: auto;
-          background color: var(--polo-blue-400, #6b8cae);
-          
-          
         }
 
         .sidebar-seccion {
           display: flex;
           flex-direction: column;
-          gap: 0.25rem;
-          background color: var(--polo-blue-400, #6b8cae);
-          
+          gap: 0.4rem;
         }
 
         .sidebar-encabezado {
@@ -71,16 +64,15 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           letter-spacing: 0.08em;
           font-weight: 600;
           padding: 0 0.5rem;
-          margin-bottom: 0.35rem;
-          background color: var(--polo-blue-400, #6b8cae);
+          margin-bottom: 0.15rem;
         }
 
         .sidebar-btn {
           display: flex;
           align-items: center;
           gap: 0.65rem;
-          background: transparent;
-          border: none;
+          background: var(--polo-blue-900, #142943);
+          border: 1px solid var(--polo-blue-800, #1c3a5e);
           color: var(--polo-blue-100, #cfe0f5);
           padding: 0.6rem 0.8rem;
           text-align: left;
@@ -89,8 +81,8 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           font-size: 0.9rem;
           font-weight: 500;
           width: 100%;
-          transition: background-color 0.18s ease, color 0.18s ease, transform 0.1s ease;
-          background color: var(--polo-blue-400, #6b8cae);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          transition: background-color 0.18s ease, color 0.18s ease, transform 0.1s ease, box-shadow 0.18s ease;
         }
 
         .sidebar-icono {
@@ -101,22 +93,25 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
         .sidebar-btn:hover {
           background-color: var(--polo-blue-800, #1c3a5e);
           color: var(--polo-blue-50, #f0f6ff);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          transform: translateY(-1px);
         }
 
         .sidebar-btn:active {
-          transform: scale(0.98);
+          transform: translateY(0) scale(0.98);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .sidebar-btn.activo {
           background: linear-gradient(90deg, var(--polo-blue-700, #2a4d7a), var(--polo-blue-800, #1c3a5e));
           color: var(--polo-blue-50, #f0f6ff);
-          box-shadow: inset 3px 0 0 var(--polo-blue-300, #8fb8e0);
+          box-shadow: inset 3px 0 0 var(--polo-blue-300, #8fb8e0), 0 2px 6px rgba(0, 0, 0, 0.35);
         }
 
         .sidebar-footer {
           display: flex;
           flex-direction: column;
-          gap: 0.25rem;
+          gap: 0.4rem;
           border-top: 1px solid var(--polo-blue-800, #1c3a5e);
           padding-top: 1rem;
         }
