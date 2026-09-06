@@ -159,12 +159,13 @@ export default function TaskPanel() {
       </div>
 
       {/* Formulario completo de creación */}
+    {/* Formulario completo de creación */}
       <form onSubmit={agregarTarea} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem', backgroundColor: 'var(--polo-blue-50)', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--polo-blue-200)' }}>
         <input 
           type="text" 
           value={nuevaTexto}
           onChange={(e) => setNuevaTexto(e.target.value)}
-          placeholder="¿Qué tarea o entrega hay?"
+          placeholder="Ingresar Actividad Pendiente"
           style={{ padding: '0.4rem', borderRadius: '4px', border: '1px solid var(--polo-blue-300)', fontSize: '0.85rem' }}
         />
         
