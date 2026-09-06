@@ -34,6 +34,7 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           padding: 1.5rem 1rem;
           background: var(--polo-blue-950, #0a1628);
           gap: 1.5rem;
+          background color: var(--polo-blue-400, #6b8cae);
         }
 
         .sidebar-titulo {
@@ -41,6 +42,7 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           font-weight: 700;
           color: var(--polo-blue-50, #f0f6ff);
           margin: 0;
+          background color: var(--polo-blue-400, #6b8cae);
         }
 
         .sidebar-nav {
@@ -49,7 +51,8 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           gap: 1.25rem;
           flex-grow: 1;
           overflow-y: auto;
-          background color :  var(--polo-blue-400, #6b8cae);
+          background color: var(--polo-blue-400, #6b8cae);
+          
           
         }
 
@@ -57,6 +60,8 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
+          background color: var(--polo-blue-400, #6b8cae);
+          
         }
 
         .sidebar-encabezado {
@@ -67,6 +72,7 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           font-weight: 600;
           padding: 0 0.5rem;
           margin-bottom: 0.35rem;
+          background color: var(--polo-blue-400, #6b8cae);
         }
 
         .sidebar-btn {
@@ -84,6 +90,7 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           font-weight: 500;
           width: 100%;
           transition: background-color 0.18s ease, color 0.18s ease, transform 0.1s ease;
+          background color: var(--polo-blue-400, #6b8cae);
         }
 
         .sidebar-icono {
