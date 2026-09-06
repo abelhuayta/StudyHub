@@ -49,6 +49,8 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
           gap: 1.25rem;
           flex-grow: 1;
           overflow-y: auto;
+          background color :  var(--polo-blue-400, #6b8cae);
+          
         }
 
         .sidebar-seccion {
