@@ -1,0 +1,113 @@
+/* 1. Paleta de colores base */
+:root {
+  --polo-blue-50: #f2f8fb;
+  --polo-blue-100: #e8f2f7;
+  --polo-blue-200: #d5e6f0;
+  --polo-blue-300: #bbd4e6;
+  --polo-blue-400: #9fbdda;
+  --polo-blue-500: #91add1;
+  --polo-blue-600: #6e8abd;
+  --polo-blue-700: #5d76a5;
+  --polo-blue-800: #4d6186;
+  --polo-blue-900: #43536c;
+  --polo-blue-950: #272f3f;
+}
+
+/* 2. Reset básico para que los márgenes del navegador no molesten */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--polo-blue-50);
+  color: var(--polo-blue-900);
+}
+
+/* 3. El Layout Principal (El Cascarón) */
+.app-layout {
+  display: grid;
+  /* 260px fijos para el menú, el resto de la pantalla (1fr) para el contenido */
+  grid-template-columns: 260px 1fr; 
+  grid-template-rows: auto 1fr;
+  /* Aquí "dibujamos" la estructura de la aplicación */
+  grid-template-areas:
+    "sidebar timeline"
+    "sidebar main";
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 4. Estilos de los Componentes (Las Piezas) */
+.sidebar {
+  grid-area: sidebar; /* Se ancla al área "sidebar" del dibujo de arriba */
+  background-color: var(--polo-blue-950);
+  color: var(--polo-blue-50);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline {
+  grid-area: timeline; /* Se ancla al área "timeline" */
+  background-color: var(--polo-blue-800);
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto; /* Permite hacer scroll horizontal si las 17 semanas no caben */
+}
+
+.week-btn {
+  background-color: var(--polo-blue-600);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.week-btn:hover {
+  background-color: var(--polo-blue-500);
+}
+
+/* 5. Área Central (PDFs y Tareas) */
+.main-content {
+  grid-area: main; /* Se ancla al área "main" */
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.content-grid {
+  display: grid;
+  /* El PDF ocupará el doble de espacio (2fr) que el panel de tareas (1fr) */
+  grid-template-columns: 2fr 1fr; 
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.material-viewer, .task-panel {
+  background-color: white;
+  border: 1px solid var(--polo-blue-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.pdf-placeholder {
+  background-color: var(--polo-blue-100);
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--polo-blue-400);
+  border-radius: 6px;
+  margin-top: 1rem;
+  color: var(--polo-blue-700);
+  font-weight: bold;
+}
