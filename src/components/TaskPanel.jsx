@@ -164,7 +164,7 @@ export default function TaskPanel() {
           type="text" 
           value={nuevaTexto}
           onChange={(e) => setNuevaTexto(e.target.value)}
-          placeholder="¿Qué tarea o entrega hay?"
+          placeholder="Ingresar Actividad Pendiente"
           style={{ padding: '0.4rem', borderRadius: '4px', border: '1px solid var(--polo-blue-300)', fontSize: '0.85rem' }}
         />
         

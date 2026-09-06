@@ -111,3 +111,26 @@ body {
   color: var(--polo-blue-700);
   font-weight: bold;
 }
+/* Efecto hover para la lista de cursos en el Sidebar */
+.sidebar li {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+}
+
+.sidebar li:hover {
+  transform: scale(1.04);
+  background-color: var(--polo-blue-900);
+}
+
+/* Efecto hover para las tarjetas de cursos en el DashboardHome */
+.dashboard-home .course-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.dashboard-home .course-card:hover {
+  transform: scale(1.20);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
