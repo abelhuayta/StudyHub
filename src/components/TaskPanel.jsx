@@ -217,8 +217,8 @@ export default function TaskPanel() {
                 flexDirection: 'column',
                 padding: '0.65rem',
                 marginBottom: '0.5rem',
-                backgroundColor: tarea.completada ? 'var(--polo-blue-50)' : 'white',
-                border: `1px solid ${tarea.completada ? 'var(--polo-blue-200)' : 'var(--polo-blue-300)'}`,
+                backgroundColor: tarea.completada ? 'var(--blaquito)' : 'white',
+                border: `1px solid ${tarea.completada ? 'var(--verdecito)' : 'var(--amarillito)'}`,
                 borderRadius: '6px',
                 gap: '0.4rem'
               }}>
@@ -228,26 +228,26 @@ export default function TaskPanel() {
                       type="checkbox" 
                       checked={tarea.completada}
                       onChange={() => toggleTarea(tarea.id)}
-                      style={{ width: '1.1rem', height: '1.1rem', accentColor: 'var(--polo-blue-600)', marginTop: '0.1rem' }}
+                      style={{ width: '1.1rem', height: '1.1rem', accentColor: 'var(--verdecito)', marginTop: '0.1rem' }}
                     />
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.15rem' }}>
                       <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', flexWrap: 'wrap' }}>
-                        <span style={{ fontSize: '0.7rem', backgroundColor: 'var(--polo-blue-200)', color: 'var(--polo-blue-900)', padding: '0.1rem 0.4rem', borderRadius: '4px', fontWeight: 'bold' }}>
+                        <span style={{ fontSize: '0.7rem', backgroundColor: 'var(#008000)', color: 'var(#008000)', padding: '0.1rem 0.4rem', borderRadius: '4px', fontWeight: 'bold' }}>
                           {tarea.curso}
                         </span>
-                        <span style={{ fontSize: '0.7rem', color: 'var(--polo-blue-700)' }}>
+                        <span style={{ fontSize: '0.7rem', color: 'var(#008000' }}>
                           {tipoInfo.icono} {tipoInfo.label}
                         </span>
                       </div>
                       <span style={{ 
                         textDecoration: tarea.completada ? 'line-through' : 'none', 
-                        color: tarea.completada ? 'var(--polo-blue-400)' : 'var(--polo-blue-900)',
+                        color: tarea.completada ? 'var(#008000)' : 'var(#008000)',
                         fontWeight: '500',
                         fontSize: '0.85rem'
                       }}>
                         {tarea.texto}
                       </span>
-                      <span style={{ fontSize: '0.7rem', color: 'var(--polo-blue-600)' }}>
+                      <span style={{ fontSize: '0.7rem', color: 'var(#008000)' }}>
                         Fecha límite: {formatearFecha(tarea.fechaLimite)}
                       </span>
                     </div>
