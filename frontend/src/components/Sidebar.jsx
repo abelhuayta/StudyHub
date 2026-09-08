@@ -23,7 +23,15 @@ const SECCIONES = [
   },
 ];
 
-export default function Sidebar({ vistaActual, setVistaActual }) {
+export default function Sidebar({ vistaActual, setVistaActual, setSemanaSeleccionada }) {
+  
+  const manejarCambioVista = (id) => {
+    setVistaActual(id);
+    if (setSemanaSeleccionada) {
+      setSemanaSeleccionada(null); // Resetea el visor de semanas al cambiar de sección general
+    }
+  };
+
   return (
     <aside className="sidebar">
       <style>{`
@@ -213,7 +221,7 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
             {seccion.items.map((item) => (
               <button
                 key={item.id}
-                onClick={() => setVistaActual(item.id)}
+                onClick={() => manejarCambioVista(item.id)}
                 className={`sidebar-btn ${vistaActual === item.id ? 'activo' : ''}`}
                 aria-current={vistaActual === item.id ? 'page' : undefined}
               >
@@ -227,14 +235,14 @@ export default function Sidebar({ vistaActual, setVistaActual }) {
 
       <div className="sidebar-footer">
         <button
-          onClick={() => setVistaActual('perfil')}
+          onClick={() => manejarCambioVista('perfil')}
           className={`sidebar-btn ${vistaActual === 'perfil' ? 'activo' : ''}`}
         >
           <span className="sidebar-icono-wrap">👤</span>
           <span className="sidebar-label">Perfil</span>
         </button>
         <button
-          onClick={() => setVistaActual('ajustes')}
+          onClick={() => manejarCambioVista('ajustes')}
           className={`sidebar-btn ${vistaActual === 'ajustes' ? 'activo' : ''}`}
         >
           <span className="sidebar-icono-wrap">⚙️</span>
